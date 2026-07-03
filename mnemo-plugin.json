@@ -3,6 +3,7 @@
   "displayName": "Translator",
   "version": "1.0.0",
   "description": "Batch-translate text and Markdown files using your own AI API. 16 languages, streaming inference, file import/export.",
+  "repository": "https://github.com/yaka0007/mnemosyne_OS-translator",
   "permissions": ["vault:read", "model:infer"],
   "updateStrategy": "git",
   "entrypoints": {
