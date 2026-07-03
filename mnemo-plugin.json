@@ -1,0 +1,21 @@
+{
+  "name": "@mnemosyne-plugins/translator",
+  "displayName": "Translator",
+  "version": "1.0.0",
+  "description": "Batch-translate text and Markdown files using your own AI API. 16 languages, streaming inference, file import/export.",
+  "permissions": ["vault:read", "model:infer"],
+  "updateStrategy": "git",
+  "entrypoints": {
+    "renderer": "index.html"
+  },
+  "widgets": [
+    {
+      "id": "main",
+      "name": "Translator",
+      "route": "index.html",
+      "defaultWidth": 720,
+      "defaultHeight": 540,
+      "icon": "🌐"
+    }
+  ]
+}
