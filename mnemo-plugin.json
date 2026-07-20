@@ -2,10 +2,21 @@
   "name": "@mnemosyne-plugins/translator",
   "displayName": "Translator",
   "version": "1.0.0",
-  "description": "Batch-translate text and Markdown files using your own AI API. 16 languages, streaming inference, file import/export.",
+  "category": "Productivity",
+  "description": "AI-powered document & text translation. 16 languages, streaming inference, file import/export.",
+  "descriptionI18n": {
+    "fr": "Traduction de documents et de texte propulsée par l'IA. 16 langues, inférence en flux, import/export de fichiers.",
+    "en": "AI-powered document & text translation. 16 languages, streaming inference, file import/export.",
+    "es": "Traducción de documentos y texto impulsada por IA. 16 idiomas, inferencia en streaming, importación/exportación de archivos."
+  },
+  "icon": "icon.svg",
   "repository": "https://github.com/yaka0007/mnemosyne_OS-translator",
-  "permissions": ["vault:read", "model:infer"],
-  "updateStrategy": "git",
+  "permissions": [
+    "vault:read",
+    "vault:write",
+    "model:infer"
+  ],
+  "updateStrategy": "manual",
   "entrypoints": {
     "renderer": "index.html"
   },
@@ -13,7 +24,7 @@
     {
       "id": "main",
       "name": "Translator",
-      "route": "index.html",
+      "route": "/",
       "defaultWidth": 720,
       "defaultHeight": 540,
       "icon": "🌐"
