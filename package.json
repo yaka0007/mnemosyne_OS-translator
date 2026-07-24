@@ -1,8 +1,10 @@
 {
   "name": "mnemosyne-os-translator",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "private": true,
-  "author": { "name": "yaka0007" },
+  "author": {
+    "name": "yaka0007"
+  },
   "license": "MIT",
   "description": "Mnemosyne OS Translator — AI-powered document translation cartridge.",
   "scripts": {

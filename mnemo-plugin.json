@@ -1,20 +1,21 @@
 {
   "name": "@mnemosyne-plugins/translator",
   "displayName": "Translator",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "category": "Productivity",
-  "description": "AI-powered document & text translation. 16 languages, streaming inference, file import/export.",
+  "description": "AI translation workspace: a dashboard with quick-translate and stats, a document pipeline (PDF/DOCX/OCR), an Auto/Local/Cloud engine picker, a searchable history, plus a vocabulary repertoire and spaced-repetition review (beta).",
   "descriptionI18n": {
-    "fr": "Traduction de documents et de texte propulsée par l'IA. 16 langues, inférence en flux, import/export de fichiers.",
-    "en": "AI-powered document & text translation. 16 languages, streaming inference, file import/export.",
-    "es": "Traducción de documentos y texto impulsada por IA. 16 idiomas, inferencia en streaming, importación/exportación de archivos."
+    "fr": "Espace de traduction IA : un dashboard avec traduction rapide et statistiques, un pipeline de documents (PDF/DOCX/OCR), un sélecteur de moteur Auto/Local/Cloud, un historique cherchable, plus un répertoire de vocabulaire et une révision à répétition espacée (bêta).",
+    "en": "AI translation workspace: a dashboard with quick-translate and stats, a document pipeline (PDF/DOCX/OCR), an Auto/Local/Cloud engine picker, a searchable history, plus a vocabulary repertoire and spaced-repetition review (beta).",
+    "es": "Espacio de traducción IA: un panel con traducción rápida y estadísticas, un flujo de documentos (PDF/DOCX/OCR), un selector de motor Auto/Local/Cloud, un historial con búsqueda, más un repertorio de vocabulario y repaso de repetición espaciada (beta)."
   },
   "icon": "icon.svg",
   "repository": "https://github.com/yaka0007/mnemosyne_OS-translator",
   "permissions": [
     "vault:read",
     "vault:write",
-    "model:infer"
+    "model:infer",
+    "dialog:open"
   ],
   "updateStrategy": "manual",
   "entrypoints": {
@@ -25,8 +26,8 @@
       "id": "main",
       "name": "Translator",
       "route": "/",
-      "defaultWidth": 720,
-      "defaultHeight": 540,
+      "defaultWidth": 760,
+      "defaultHeight": 600,
       "icon": "🌐"
     }
   ]

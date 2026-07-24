@@ -54,3 +54,29 @@ select option {
   background-color: var(--bg-menu, #1b1b1e) !important;
   color: var(--text-primary) !important;
 }
+
+/* ── Button interaction feedback ─────────────────────────────────────
+   The UI is inline-styled, so :hover/:active can't live on the style
+   objects. filter/transform aren't set inline, so styling them here gives
+   every button a hover + press state without fighting the inline colors. */
+button {
+  transition: filter 0.12s ease, transform 0.06s ease;
+}
+button:not(:disabled):hover {
+  filter: brightness(1.12);
+}
+button:not(:disabled):active {
+  transform: translateY(1px);
+  filter: brightness(0.94);
+}
+[data-theme="light"] button:not(:disabled):hover {
+  filter: brightness(0.96);
+}
+
+/* ── Infinity loader (a lit segment travels the ∞ path) ─────────────── */
+@keyframes mnemo-infinity-dash {
+  to { stroke-dashoffset: -100; }
+}
+.mnemo-infinity-run {
+  animation: mnemo-infinity-dash 1.4s linear infinite;
+}
