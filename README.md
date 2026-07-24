@@ -25,6 +25,11 @@ catalogued into your Mnemosyne vault so past work stays recallable.
 Open **MnemoHub** inside Mnemosyne OS Infinity Edition and install **Translator** — the app
 downloads this repository and renders it as a cartridge. No manual setup needed.
 
+> [!NOTE]
+> The **local-model list** in the engine picker needs a recent Infinity Edition build.
+> On older hosts the picker simply falls back to **Auto / Cloud / Local (active)** — every
+> other feature (quick translate, document/OCR pipeline, history, vocabulary) works as usual.
+
 ## Development
 
 ```bash
