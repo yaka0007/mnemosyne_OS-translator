@@ -19,6 +19,11 @@ const INFER_TIMEOUT_MS = 300_000; //  5 min — translating on an already-loaded
 // caps at ~10 min. Use a ceiling above that so a slow first load isn't cut short
 // by our own timeout — the failure mode Tony hit (no error, just silence).
 const LOCAL_LOAD_TIMEOUT_MS = 720_000; // 12 min
+// The FIRST permission-gated call can open the host's native "Security
+// Authorization Required" dialog and wait for the human's click — a short bound
+// races them and boots the cartridge into a dead session (the Muse beta bug).
+// Human-paced, like the canonical cartridge-sdk default.
+const PERMISSION_PACED_TIMEOUT_MS = 300_000; // 5 min
 
 /**
  * Best-effort host origin for a targeted postMessage — never broadcast to '*'.
@@ -309,7 +314,7 @@ Rules:
   );
 
   const ensureSandbox = useCallback(
-    () => sendRequest('vault.sandbox.ensure', {}) as Promise<SandboxInfo>,
+    () => sendRequest('vault.sandbox.ensure', {}, PERMISSION_PACED_TIMEOUT_MS) as Promise<SandboxInfo>,
     [],
   );
 
